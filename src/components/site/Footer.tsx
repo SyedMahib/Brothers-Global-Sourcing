@@ -34,7 +34,7 @@ const socials = [
 
 function ColumnHeading({ children }: { children: ReactNode }) {
   return (
-    <h4 className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+    <h4 className="flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-[0.2em] text-gold">
       <span className="h-px w-6 bg-linear-to-r from-gold to-transparent" />
       {children}
     </h4>
@@ -46,7 +46,7 @@ function FooterLink({ to, label }: { to: string; label: string }) {
     <li>
       <Link
         to={to}
-        className="group inline-flex items-center gap-1.5 text-sm text-cream/70 transition-colors duration-300 hover:text-gold"
+        className="group inline-flex items-center gap-1.5 text-sm text-cream transition-colors duration-300 hover:text-gold"
       >
         <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-gold opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
         <span className="relative">
@@ -80,7 +80,7 @@ export function Footer() {
                   Let&apos;s build your next season{" "}
                   <span className="text-gold">together</span>
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream/60">
+                <p className="mt-3 text-sm leading-relaxed text-cream/80">
                   From first sketch to final AQL inspection — get sourcing
                   support that protects your margins and your brand.
                 </p>
@@ -110,7 +110,7 @@ export function Footer() {
                   <span className="font-display text-xl font-bold text-gold">
                     {s.value}
                   </span>
-                  <span className="text-xs text-cream/55">{s.label}</span>
+                  <span className="text-xs text-cream">{s.label}</span>
                 </div>
               ))}
             </div>
@@ -121,10 +121,10 @@ export function Footer() {
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-12">
           <Reveal className="sm:col-span-2 lg:col-span-4">
             <Logo variant="dark" />
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/65">
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream">
               {contact.tagline}
             </p>
-            <p className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-cream/50">
+            <p className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-cream">
               <Clock className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold/80" />
               {contact.responseNote}
             </p>
@@ -171,7 +171,7 @@ export function Footer() {
                 </span>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="pt-2 text-sm text-cream/70 transition-colors duration-300 hover:text-gold"
+                  className="pt-2 text-sm text-cream transition-colors duration-300 hover:text-gold"
                 >
                   {contact.email}
                 </a>
@@ -182,7 +182,7 @@ export function Footer() {
                 </span>
                 <a
                   href={contact.whatsapp}
-                  className="pt-2 text-sm text-cream/70 transition-colors duration-300 hover:text-gold"
+                  className="pt-2 text-sm text-cream transition-colors duration-300 hover:text-gold"
                 >
                   {contact.phone}
                 </a>
@@ -191,7 +191,7 @@ export function Footer() {
                 <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-cream/10 bg-cream/5 text-gold transition-all duration-300 group-hover:border-rust/40 group-hover:bg-rust/15 group-hover:text-rust">
                   <MapPin className="h-4 w-4" />
                 </span>
-                <span className="pt-2 text-sm leading-relaxed text-cream/70">
+                <span className="pt-2 text-sm leading-relaxed text-cream">
                   {/* {contact.address} */}
                   Dhaka, Bangladesh
                 </span>
@@ -202,7 +202,7 @@ export function Footer() {
                 </span>
                 <a
                   href="https://drive.google.com/file/d/1qZSskaKC0GCYelCmn4EEgyVFR0xxXja9/view?usp=drive_link"
-                  className="pt-2 text-sm leading-relaxed text-cream/70"
+                  className="pt-2 text-sm leading-relaxed text-cream transition-colors duration-300 hover:text-gold"
                   target="_blank"
                 >
                   BGS Compnay Profile
@@ -215,11 +215,13 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="relative border-t border-cream/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs text-cream/50 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <p>© {year} Brother&apos;s Global Sourcing. All rights reserved.</p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-            <p className="flex items-center gap-1.5">
-              <MapPin className="h-3.5 w-3.5 text-gold/70" />
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs text-cream sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p className="text-center">
+            © {year} Brother&apos;s Global Sourcing. All rights reserved.
+          </p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 justify-center">
+            <p className="flex items-center gap-1.5 text-center">
+              <MapPin className="h-3.5 w-3.5 text-gold" />
               Garments Buying House · Dhaka, Bangladesh
             </p>
             <button
