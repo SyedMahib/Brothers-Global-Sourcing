@@ -31,6 +31,7 @@ import {
   Reveal,
   Section,
   StatBar,
+  HowWeWork,
 } from "@/components/site";
 import { stats, testingPartners } from "@/data/site";
 
@@ -187,7 +188,9 @@ function Home() {
         </div>
       </section>
 
-      <Section tone="white">
+      <HowWeWork />
+
+      {/* <Section tone="white">
         <Heading
           eyebrow="What We Do"
           title="One Team Across the Whole"
@@ -209,7 +212,7 @@ function Home() {
             </div>
           </Reveal>
         </div>
-      </Section>
+      </Section> */}
 
       <Section>
         <Heading
