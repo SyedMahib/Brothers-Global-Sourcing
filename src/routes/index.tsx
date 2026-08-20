@@ -33,6 +33,7 @@ import {
   StatBar,
   HowWeWork,
   AboutUs,
+  OurServices,
 } from "@/components/site";
 import { stats, testingPartners } from "@/data/site";
 
@@ -191,31 +192,7 @@ function Home() {
 
       <AboutUs />
 
-      <HowWeWork />
-
-      {/* <Section tone="white">
-        <Heading
-          eyebrow="What We Do"
-          title="One Team Across the Whole"
-          accent="Sourcing Journey."
-          intro="From first sketch to shipped carton, every stage is handled by the same coordinated team."
-        />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <IconCard key={s.title} {...s} index={i} />
-          ))}
-          <Reveal delay={350}>
-            <div className="flex h-full flex-col justify-between rounded-3xl bg-rust-soft p-7">
-              <p className="font-display text-lg font-bold leading-snug text-navy">
-                Need a partner who owns the process end to end?
-              </p>
-              <div className="mt-6">
-                <PrimaryLink to="/contact">Talk to us</PrimaryLink>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </Section> */}
+      <OurServices />
 
       <Section>
         <Heading
@@ -260,6 +237,8 @@ function Home() {
           <GhostLink to="/products">View all 7 categories</GhostLink>
         </div>
       </Section>
+
+      <HowWeWork />
 
       <Section tone="deep">
         <Heading

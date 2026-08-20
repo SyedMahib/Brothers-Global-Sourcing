@@ -22,7 +22,7 @@ const pillars = [
 
 export default function AboutUs() {
   return (
-    <Section>
+    <Section className="bg-white">
       <Heading
         align="left"
         eyebrow="Who We Are"
