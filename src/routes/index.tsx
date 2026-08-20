@@ -32,6 +32,7 @@ import {
   Section,
   StatBar,
   HowWeWork,
+  AboutUs,
 } from "@/components/site";
 import { stats, testingPartners } from "@/data/site";
 
@@ -187,6 +188,8 @@ function Home() {
           <StatBar items={stats} />
         </div>
       </section>
+
+      <AboutUs />
 
       <HowWeWork />
 
