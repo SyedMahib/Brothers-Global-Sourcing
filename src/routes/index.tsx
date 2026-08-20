@@ -34,6 +34,7 @@ import {
   HowWeWork,
   AboutUs,
   OurServices,
+  OurFactoryNetwork,
 } from "@/components/site";
 import { stats, testingPartners } from "@/data/site";
 
@@ -239,6 +240,8 @@ function Home() {
       </Section>
 
       <HowWeWork />
+
+      <OurFactoryNetwork />
 
       <Section tone="deep">
         <Heading
