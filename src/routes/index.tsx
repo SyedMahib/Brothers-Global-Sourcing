@@ -11,11 +11,13 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import heroHome from "@/assets/hero-home.jpg";
-import catKnit from "@/assets/cat-knitwear.jpg";
-import catWoven from "@/assets/cat-woven.jpg";
-import catSport from "@/assets/cat-sportswear.jpg";
-import catDenim from "@/assets/cat-denim.jpg";
+import catKnit from "@/assets/bgs-01-knitwear.jpg";
+import catWoven from "@/assets/bgs-02-woven-apparel.jpg";
+import catSweater from "@/assets/bgs-03-sweaters.jpg";
+import catSport from "@/assets/bgs-04-sportswear.jpg";
+import catWorkWear from "@/assets/bgs-05-workwear.jpg";
+import catDenim from "@/assets/bgs-06-denim.jpg";
+import catAccessories from "@/assets/bgs-07-accessories.jpg";
 import marketUsa from "@/assets/market-usa.jpg";
 import marketCanada from "@/assets/market-canada.jpg";
 import marketEurope from "@/assets/market-europe.jpg";
@@ -128,16 +130,34 @@ const categories = [
     note: "Shirts, bottoms, outerwear",
   },
   {
+    to: "/sweater",
+    label: "Sweaters",
+    img: catSweater,
+    note: "Sweaters, pullovers, cardigans",
+  },
+  {
     to: "/sportswear",
     label: "Sportswear",
     img: catSport,
     note: "Training, gym, athleisure",
   },
   {
+    to: "/workwear",
+    label: "WorkWear",
+    img: catWorkWear,
+    note: "Outdoor & indoor workwear,",
+  },
+  {
     to: "/denimwear",
     label: "Denim",
     img: catDenim,
     note: "Jeans, jackets, dungarees",
+  },
+  {
+    to: "/accessories",
+    label: "Accessories",
+    img: catAccessories,
+    note: "Caps, jute bags, tote bags",
   },
 ] as const;
 
@@ -193,10 +213,10 @@ function Home() {
 
       <Section>
         <Heading
-          eyebrow="Product Categories"
-          title="Multiple Categories."
-          accent="One Coordinated Journey."
-          intro="Seven product categories, developed and followed up by a single merchandising team."
+          eyebrow="Our Product Line"
+          title="Product"
+          accent="Categories."
+          intro="We support a wide range of ready-made garments for men, women, and kids across woven, knit, denim, sweaters, sportswear, and workwear segments."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
@@ -229,9 +249,6 @@ function Home() {
               </Link>
             </Reveal>
           ))}
-        </div>
-        <div className="mt-12 flex justify-center">
-          <GhostLink to="/products">View all 7 categories</GhostLink>
         </div>
       </Section>
 

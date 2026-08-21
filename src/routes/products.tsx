@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Leaf, Palette, Ruler, Sparkles } from "lucide-react";
 import heroProducts from "@/assets/hero-products.jpg";
-import catKnit from "@/assets/cat-knitwear.jpg";
-import catWoven from "@/assets/cat-woven.jpg";
-import catSweaters from "@/assets/cat-sweaters.jpg";
-import catSport from "@/assets/cat-sportswear.jpg";
-import catWork from "@/assets/cat-workwear.jpg";
-import catDenim from "@/assets/cat-denim.jpg";
-import catAcc from "@/assets/cat-accessories.jpg";
+import catKnit from "@/assets/bgs-01-knitwear.jpg";
+import catWoven from "@/assets/bgs-02-woven-apparel.jpg";
+import catSweater from "@/assets/bgs-03-sweaters.jpg";
+import catSport from "@/assets/bgs-04-sportswear.jpg";
+import catWorkWear from "@/assets/bgs-05-workwear.jpg";
+import catDenim from "@/assets/bgs-06-denim.jpg";
+import catAccessories from "@/assets/bgs-07-accessories.jpg";
 import { CTABand, Heading, IconCard, Reveal, Section } from "@/components/site";
 
 export const Route = createFileRoute("/products")({
@@ -59,12 +59,25 @@ const cats: Cat[] = [
     items: "Shirts, bottoms, outerwear, sleepwear, dresses & skirts, kids",
   },
   {
+    name: "Sweaters",
+    img: catSweater,
+    group: "Knit",
+    items: "Sweaters, pullovers, cardigans",
+  },
+  {
     name: "Sportswear & Athleisure",
     img: catSport,
     group: "Performance",
     to: "/sportswear",
     items:
       "Training & teamwear, gym & studio, running, tracksuits, modest activewear",
+  },
+  {
+    name: "Workwear & Uniforms",
+    img: catWorkWear,
+    group: "Woven",
+    items:
+      "Outdoor & indoor workwear, medical uniforms, chef's gowns, school uniforms",
   },
   {
     name: "Denim",
@@ -75,21 +88,8 @@ const cats: Cat[] = [
       "Jeans, jackets, overalls & dungarees, trousers, shirts, shorts, skirts, workwear",
   },
   {
-    name: "Sweaters",
-    img: catSweaters,
-    group: "Knit",
-    items: "Sweaters, pullovers, cardigans",
-  },
-  {
-    name: "Workwear & Uniforms",
-    img: catWork,
-    group: "Woven",
-    items:
-      "Outdoor & indoor workwear, medical uniforms, chef's gowns, school uniforms",
-  },
-  {
     name: "Accessories",
-    img: catAcc,
+    img: catAccessories,
     group: "Accessories",
     items: "Caps, jute bags, tote bags, backpacks, boots, sneakers, scarves",
   },

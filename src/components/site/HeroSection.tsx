@@ -42,27 +42,24 @@ export function HeroSection() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
         <div>
-          <span className="inline-flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-rust">
-            <span className="h-px w-8 bg-rust" />
-            Garments Buying House · Dhaka
-          </span>
-
-          <h1 className="mt-5 text-3xl font-extrabold leading-[1.2] text-navy sm:text-4xl lg:text-[2.75rem]">
-            Your trusted partner in{" "}
-            <span className="text-rust">ready-made</span> garments sourcing.
-          </h1>
-
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-navy/70">
-            Brothers Global Sourcing (BGS) directly sources high-quality
-            garments from trusted and compliant Bangladeshi factories and
-            exports them to global brands, importers, and retailers — on Trust,
-            Transparency, and Committed Delivery.
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-3">
-            <PrimaryLink to="/products">Our Capabilities</PrimaryLink>
-            <GhostLink to="/contact">Work With Us</GhostLink>
-          </div>
+          <Reveal>
+            <span className="eyebrow">Garments Buying House · Dhaka</span>
+            <h1 className="mt-5 font-display text-3xl font-extrabold leading-[1.3] text-navy sm:text-4xl lg:text-[2.75rem]">
+              Your trusted partner in
+              <span className="text-rust"> ready-made </span>
+              garments sourcing.
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+              Brothers Global Sourcing (BGS) directly sources high-quality
+              garments from trusted and compliant Bangladeshi factories and
+              exports them to global brands, importers, and retailers — on
+              Trust, Transparency, and Committed Delivery.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <PrimaryLink to="/products">Our Capabilities</PrimaryLink>
+              <GhostLink to="/contact">Work With Us</GhostLink>
+            </div>
+          </Reveal>
         </div>
 
         {/* Right column intentionally empty on desktop so the background video reads as the hero visual */}
@@ -70,7 +67,7 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto mt-18 max-w-7xl">
-        <p className="mb-3 text-center text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-navy/45">
+        <p className="mb-3 text-center text-[0.65rem] font-bold uppercase tracking-[0.2em] text-navy/75">
           Trusted by global buyers
         </p>
         <StatBar items={stats} />

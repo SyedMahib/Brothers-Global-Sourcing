@@ -9,7 +9,7 @@ import {
   Search,
   Truck,
 } from "lucide-react";
-import heroAbout from "@/assets/hero-about.jpg";
+import heroAbout from "@/assets/AboutHero.jpeg";
 import qualityImg from "@/assets/about-quality.jpg";
 import {
   CTABand,
@@ -126,8 +126,18 @@ function About() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-cream px-5 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
+      <section className="relative overflow-hidden px-5 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
+        {/* Background image */}
+        <img
+          src={heroAbout}
+          alt="BGS merchandising team reviewing fabric swatches in a sunlit Dhaka office"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Readability overlay: solid cream on the left where text sits,
+            fading to mostly-transparent on the right where the image shows through */}
+        <div className="absolute inset-0 bg-linear-to-r from-cream via-cream/90 to-cream/15" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[2fr_1.05fr]">
           <Reveal>
             <span className="eyebrow">Our Story</span>
             <h1 className="mt-5 font-display text-3xl font-extrabold leading-[1.3] text-navy sm:text-4xl lg:text-[2.75rem]">
@@ -135,19 +145,26 @@ function About() {
               <span className="text-rust"> trust, transparency </span>
               and committed delivery.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Brother&apos;s Global Sourcing (BGS) is a Dhaka-based garments
-              buying house created to be a transparent, reliable bridge between
-              global fashion brands and Bangladesh&apos;s world-class garment
-              manufacturing industry.
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Brother's Global Sourcing (BGS) was founded with a simple vision:
+              to create a transparent, reliable bridge between global fashion
+              brands and Bangladesh's world-class garment manufacturing
+              industry.
             </p>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Founded by garment-industry professionals who saw buyers struggle
-              with communication, quality consistency and supply-chain
-              visibility, BGS acts as your extended sourcing office on the
-              ground — from first tech pack to final shipment.
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Our journey began when our founders, with decades of combined
+              experience in the garment industry, recognized a gap in the
+              market. While Bangladesh offered exceptional manufacturing
+              capabilities, international buyers often faced challenges with
+              communication, quality consistency, and supply chain transparency.
             </p>
-            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              BGS was established to address these challenges head-on, building
+              a reputation for trust, transparency, and committed delivery that
+              has made us the preferred sourcing partner for brands across
+              Europe, North America, and Australia.
+            </p>
+            <div className="mt-8 max-w-xl flex flex-wrap gap-x-8 gap-y-3">
               {[
                 "8+ years of industry experience",
                 "50+ compliant partner factories",
@@ -163,25 +180,9 @@ function About() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={140}>
-            <div className="relative">
-              <img
-                src={heroAbout}
-                alt="BGS merchandising team reviewing fabric swatches in a sunlit Dhaka office"
-                width={1600}
-                height={1008}
-                className="w-full rounded-[2.25rem] object-cover shadow-lift"
-              />
-              <div className="absolute -bottom-6 left-6 hidden rounded-2xl border border-border bg-white/95 px-5 py-4 shadow-card backdrop-blur sm:block">
-                <p className="font-display text-xl font-extrabold text-rust">
-                  Est. in Bangladesh
-                </p>
-                <p className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
-                  Uttara, Dhaka — Head Office
-                </p>
-              </div>
-            </div>
-          </Reveal>
+
+          {/* Right column intentionally left empty — background image shows through here */}
+          <div aria-hidden className="hidden lg:block" />
         </div>
       </section>
 
