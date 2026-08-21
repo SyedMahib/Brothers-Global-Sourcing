@@ -36,6 +36,7 @@ import {
   OurServices,
   OurFactoryNetwork,
   Sustainability,
+  HeroSection,
 } from "@/components/site";
 import { stats, testingPartners } from "@/data/site";
 
@@ -143,7 +144,7 @@ const categories = [
 function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-cream px-5 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
+      {/* <section className="relative overflow-hidden bg-cream px-5 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
           <Reveal>
             <span className="eyebrow">Garments Buying House · Dhaka</span>
@@ -160,7 +161,7 @@ function Home() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <PrimaryLink to="/products">Our Capabilities</PrimaryLink>
-              <GhostLink to="/contact">Contact Us</GhostLink>
+              <GhostLink to="/contact">Work With Us</GhostLink>
             </div>
           </Reveal>
           <Reveal delay={140}>
@@ -172,14 +173,6 @@ function Home() {
                 height={1104}
                 className="w-full rounded-[2.25rem] object-cover shadow-lift"
               />
-              <div className="absolute -bottom-6 left-6 hidden rounded-2xl border border-border bg-white/95 px-5 py-4 shadow-card backdrop-blur sm:block">
-                <p className="font-display text-xl font-extrabold text-rust">
-                  500 pcs
-                </p>
-                <p className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">
-                  MOQ per colour
-                </p>
-              </div>
             </div>
           </Reveal>
         </div>
@@ -190,7 +183,9 @@ function Home() {
           </p>
           <StatBar items={stats} />
         </div>
-      </section>
+      </section> */}
+
+      <HeroSection />
 
       <AboutUs />
 
@@ -338,7 +333,7 @@ function Home() {
       </Section>
 
       <Section>
-        <Reveal className="text-center">
+        {/* <Reveal className="text-center">
           <span className="eyebrow">Testing & Compliance</span>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {testingPartners.map((t) => (
@@ -350,11 +345,11 @@ function Home() {
               </span>
             ))}
           </div>
-        </Reveal>
-        <div className="mt-16">
+        </Reveal> */}
+        {/* <div className="mt-16">
           <GoldRule />
-        </div>
-        <Reveal className="mt-16 text-center">
+        </div> */}
+        <Reveal className=" text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
             Trusted partner network
           </p>

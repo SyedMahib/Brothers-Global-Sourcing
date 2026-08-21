@@ -6,3 +6,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as OurServices } from "./OurServices";
 export { default as OurFactoryNetwork } from "./OurFactoryNetwork";
 export { Sustainability } from "./Sustainability";
+export { HeroSection } from "./HeroSection";
