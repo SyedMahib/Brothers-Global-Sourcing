@@ -16,10 +16,12 @@ export function Section({
   children,
   className = "",
   tone = "cream",
+  id,
 }: {
   children: ReactNode;
   className?: string;
   tone?: "cream" | "white" | "deep";
+  id?: string;
 }) {
   const bg =
     tone === "white"
@@ -28,7 +30,7 @@ export function Section({
         ? "bg-cream-deep"
         : "bg-cream";
   return (
-    <section className={`${bg} px-5 py-20 lg:px-8 lg:py-28 ${className}`}>
+    <section id={id} className={`${bg} px-5 py-20 lg:px-8 lg:py-28 ${className}`}>
       <div className="mx-auto max-w-7xl">{children}</div>
     </section>
   );

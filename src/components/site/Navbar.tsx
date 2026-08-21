@@ -18,8 +18,8 @@ const mainLinks = [
   { to: "/about", label: "About", exists: true },
   { to: "/services", label: "Services", exists: false },
   { to: "/products", label: "Products", exists: true, hasDropdown: true },
-  { to: "/factories", label: "Factories", exists: false },
-  { to: "/sustainability", label: "Sustainability", exists: false },
+  { to: "#factory", label: "Factories", exists: true },
+  { to: "#sustainability", label: "Sustainability", exists: true },
 ] as const;
 
 // Typed <Link> for routes that exist in routeTree.gen.ts, plain <a> for the

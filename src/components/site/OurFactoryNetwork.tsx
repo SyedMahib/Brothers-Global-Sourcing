@@ -6,7 +6,7 @@ const compliance = ["BSCI", "SEDEX", "WRAP", "OEKO-TEX", "RSC/ACCORD"];
 
 export default function OurFactoryNetwork() {
   return (
-    <Section>
+    <Section id="factory">
       <Heading
         align="left"
         eyebrow="Where We Operate"
